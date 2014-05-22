@@ -184,12 +184,12 @@ namespace gdgkr {
 ...
 ```
 
-`gclient sync` 명령을 통해
+`./build/gyp_chromium` 명령을 통해
 `out/Debug/obj/chrome/common/extensions/api/chrome_api.ninja` 파일을 다시 생성한다.  
 ninja 빌드 시스템에 새로운 API를 추가해야 하기 때문이다.
 
 ```sh
-$ gclient sync
+$ ./build/gyp_chromium
 ```
 
 `chrome_api.ninja` 파일을 보면 `gdgkr.idl` 파일에서 `gdgkr.cc`와 `gdgkr.h` 파일을 생성할 수 있는 빌드 스크립트임을 알 수 있다.  
@@ -304,10 +304,10 @@ void GdgkrGreetingFunction::Callback(const std::string& name, Response* response
 ...
 ```
 
-`gclient sync`를 실행한다.
+`./build/gyp_chromium`를 실행한다.
 
 ```sh
-$ gclient sync
+$ ./build/gyp_chromium
 ```
 
 
@@ -444,10 +444,10 @@ browser/extensions/api/gdgkr/gdgkr_api_unittest.cc
 ...
 ```
 
-`gclient sync`를 실행한다.
+`./build/gyp_chromium`를 실행한다.
 
 ```sh
-$ gclient sync
+$ ./build/gyp_chromium
 ```
 
 `unit_tests` 실행파일을 생성하기 위해 빌드를 아래와 같이 수행한다.
